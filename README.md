@@ -224,56 +224,6 @@ Posted entries → Reversal only      (no edit / delete)
 
 **Edge cases:** refunded and cancelled orders are excluded from revenue. Division by zero is never performed; insufficient data returns an empty state.
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 20 or later
-- npm, pnpm or yarn
-
-### Install
-
-```bash
-git clone https://github.com/your-username/nexora.git
-cd nexora
-npm install
-```
-
-### Develop
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Build
-
-```bash
-npm run build
-npm run start
-```
-
-### Deploy
-
-NEXORA deploys to Vercel with zero configuration:
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Or import the repository from the [Vercel dashboard](https://vercel.com/new). No environment variables are required.
-
-## 🎮 Try the Demo
-
-1. Open the [live demo](https://your-demo-url.vercel.app) or your local instance.
-2. Load the sample business data from **Settings → Demo Data** (or complete first-run onboarding).
-3. Explore the full cycle: create a quotation, convert it to a sales order, deliver, invoice, and record a payment.
-4. Check **Finance → Trial Balance** to see every step reflected in the books.
-5. Press **⌘K** (or **Ctrl+K**) to jump anywhere.
-6. Use **Settings → Export** to back up your data as JSON, or **Reset** to start fresh.
-
 ## 🔒 Privacy & Security Boundary
 
 | Aspect | Reality |
