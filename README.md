@@ -1,167 +1,319 @@
-You are a senior open-source maintainer. Write a premium,
-professional README.md for my GitHub project.
+<div align="center">
 
-═══════════════════════════════════════════════
-PROJECT DETAILS
-═══════════════════════════════════════════════
+# NEXORA
 
-Name: NEXORA
-Tagline: "Run everything. From one place."
-Type: Enterprise Business ERP (General Business ERP)
-Storage: localStorage only (browser-based, no backend)
-Target: Global
+### Run everything. From one place.
 
-Description: A premium, browser-based Enterprise Business ERP
-that connects customers, suppliers, sales, purchasing,
-inventory, finance, HR and reporting into one connected
-workspace. Every module reads from the same underlying
-records — change data once, every screen follows. Runs
-entirely in the browser with zero backend.
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5%20strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-v4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-═══════════════════════════════════════════════
-TECH STACK
-═══════════════════════════════════════════════
+**[🚀 Live Demo](https://your-demo-url.vercel.app)** · **[Report a Bug](../../issues)** · **[Request a Feature](../../issues)**
 
-- Next.js 16 (App Router)
-- React 19
-- TypeScript 5 (strict)
-- Tailwind CSS v4 (@theme in globals.css)
-- framer-motion (animations)
-- next-themes (light/dark/system)
-- recharts (charts)
-- lucide-react (icons)
-- localStorage (persistence)
-- Vercel (deployment)
+</div>
 
-No backend, no database, no real payments.
+---
 
-═══════════════════════════════════════════════
-MODULES / FEATURES
-═══════════════════════════════════════════════
+NEXORA is a premium, browser-based Enterprise Business ERP that connects customers, suppliers, sales, purchasing, inventory, finance, HR and reporting into a single connected workspace. Every module reads from the same underlying records, so you change data once and every screen follows. It runs entirely in the browser with zero backend.
 
-1. Executive Dashboard — KPIs, revenue trend, activity feed,
-   priority tasks, filters
-2. CRM & Contacts — customers, suppliers, profiles, credit
-   limits, transaction history
-3. Products & Catalog — SKU, categories, units, barcodes,
-   pricing, reorder levels
-4. Inventory — stock balances, stock ledger, transfers,
-   reservations, adjustments, reorder alerts
-5. Sales (Order-to-Cash) — quotations → sales orders →
-   deliveries → invoices → payments → returns
-6. Purchasing (Procure-to-Pay) — purchase requests → POs →
-   goods receipts → supplier bills → payments → returns
-7. Finance & Accounting — chart of accounts, double-entry
-   journal, general ledger, AR/AP aging, payments, P&L,
-   balance sheet, trial balance
-8. HR — employees, departments, attendance, leaves, payroll
-9. Reports & Analytics — sales/purchase/stock reports,
-   trends, top products/customers/suppliers, CSV export
-10. Administration — users, roles (owner/admin/manager/
-    cashier/accountant/viewer), permissions, audit log
-11. Settings — business profile, currency, timezone, fiscal
-    year, theme, JSON export/import, reset
-12. Global Search — ⌘K command palette across all entities
+## 💡 What is NEXORA?
 
-═══════════════════════════════════════════════
-KEY WORKFLOWS
-═══════════════════════════════════════════════
+- **One source of truth:** sales, purchasing, stock and accounting all share the same records.
+- **Complete business cycles:** Order-to-Cash and Procure-to-Pay, end to end.
+- **Real accounting:** every transaction posts a balanced double-entry journal.
+- **Role-aware:** six roles with granular permissions and a full audit log.
+- **Zero backend:** no server, no database, no signup. Open it and run it.
+- **Premium UX:** light, dark and system themes, smooth animations, and a ⌘K command palette.
 
-Order-to-Cash:
+> [!WARNING]
+> **NEXORA is a client-side application. All data is stored in your browser's `localStorage`.** There is no server, no encryption at rest, and no real authentication. Do **not** enter real customer data, financial records, credentials or any sensitive information. See [Privacy & Security Boundary](#-privacy--security-boundary).
+
+## ✨ Features
+
+### Core Modules
+
+| Module | Capabilities |
+|---|---|
+| **Executive Dashboard** | KPIs, revenue trend, activity feed, priority tasks, date and entity filters |
+| **CRM & Contacts** | Customers and suppliers, profiles, credit limits, full transaction history |
+| **Products & Catalog** | SKU, categories, units, barcodes, pricing, reorder levels |
+| **Inventory** | Stock balances, stock ledger, transfers, reservations, adjustments, reorder alerts |
+| **Sales (Order-to-Cash)** | Quotations → sales orders → deliveries → invoices → payments → returns |
+| **Purchasing (Procure-to-Pay)** | Purchase requests → POs → goods receipts → supplier bills → payments → returns |
+| **Finance & Accounting** | Chart of accounts, double-entry journal, general ledger, AR/AP aging, payments, P&L, balance sheet, trial balance |
+| **Human Resources** | Employees, departments, attendance, leave requests, payroll runs |
+| **Reports & Analytics** | Sales, purchase and stock reports, trends, top products, customers and suppliers, CSV export |
+
+### Platform
+
+| Module | Capabilities |
+|---|---|
+| **Administration** | Users, roles (`owner` · `admin` · `manager` · `cashier` · `accountant` · `viewer`), permissions, audit log |
+| **Settings** | Business profile, currency, timezone, fiscal year, theme, JSON export/import, full reset |
+| **Global Search** | ⌘K command palette across every entity |
+
+### Built-in Integrity Rules
+
+- Debits always equal credits (enforced on every journal entry)
+- Posted journal entries can only be reversed, never edited or deleted
+- Stock reservations reduce available quantity before delivery
+- Approval workflows on sales and purchasing documents
+- Every mutation is written to the audit log
+
+## 🧰 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| UI Library | React 19 |
+| Language | TypeScript 5 (strict mode) |
+| Styling | Tailwind CSS v4 (`@theme` in `globals.css`) |
+| Animation | framer-motion |
+| Theming | next-themes (light / dark / system) |
+| Charts | recharts |
+| Icons | lucide-react |
+| Persistence | Browser `localStorage` |
+| Deployment | Vercel |
+
+**No backend. No database. No real payments.**
+
+## 📁 Project Structure
+
+```
+nexora/
+├── app/                      # Next.js App Router
+│   ├── (app)/                # Authenticated workspace routes
+│   │   ├── dashboard/
+│   │   ├── contacts/
+│   │   ├── products/
+│   │   ├── inventory/
+│   │   ├── sales/
+│   │   ├── purchasing/
+│   │   ├── finance/
+│   │   ├── hr/
+│   │   ├── reports/
+│   │   ├── admin/
+│   │   └── settings/
+│   ├── globals.css           # Tailwind v4 @theme tokens
+│   └── layout.tsx
+├── components/               # Shared UI (tables, forms, charts, palette)
+├── lib/
+│   ├── storage/              # localStorage adapter, key registry, migrations
+│   ├── accounting/           # Journal posting, ledger, statements
+│   ├── inventory/            # Balances, movements, reservations
+│   ├── calc/                 # KPI and calculation rules
+│   ├── permissions/          # Role and permission checks
+│   └── seed/                 # Demo data generators
+├── hooks/                    # Data and UI hooks
+├── types/                    # Shared TypeScript domain types
+└── public/
+```
+
+## 🗄️ Data Model
+
+All data lives in `localStorage` under keys prefixed with `nexora_`.
+
+**Core & Access**
+
+| Key | Purpose |
+|---|---|
+| `nexora_users` · `nexora_current_user` | User accounts and active session |
+| `nexora_business` · `nexora_settings` | Business profile and preferences |
+| `nexora_permissions` | Role-permission matrix |
+
+**Master Data**
+
+| Key | Purpose |
+|---|---|
+| `nexora_customers` · `nexora_suppliers` | Contacts |
+| `nexora_products` · `nexora_categories` · `nexora_units` | Catalog |
+| `nexora_warehouses` · `nexora_branches` | Locations |
+
+**Sales**
+
+| Key | Purpose |
+|---|---|
+| `nexora_quotations` · `nexora_sales_orders` | Pre-sale and order documents |
+| `nexora_deliveries` · `nexora_sales_invoices` | Fulfilment and billing |
+| `nexora_customer_returns` | Returns and credits |
+
+**Purchasing**
+
+| Key | Purpose |
+|---|---|
+| `nexora_purchase_requests` · `nexora_purchase_orders` | Requisition and ordering |
+| `nexora_goods_receipts` · `nexora_supplier_bills` | Receiving and billing |
+| `nexora_purchase_returns` | Supplier returns |
+
+**Inventory**
+
+| Key | Purpose |
+|---|---|
+| `nexora_stock_balances` · `nexora_stock_movements` | Current stock and ledger |
+| `nexora_stock_transfers` · `nexora_stock_reservations` | Transfers and holds |
+| `nexora_stock_adjustments` | Corrections |
+
+**Finance**
+
+| Key | Purpose |
+|---|---|
+| `nexora_accounts` | Chart of accounts |
+| `nexora_journal_entries` · `nexora_journal_lines` | Double-entry ledger |
+| `nexora_payments` · `nexora_payment_allocations` | Payments and invoice/bill allocation |
+| `nexora_fiscal_periods` · `nexora_expenses` | Periods and expenses |
+
+**HR**
+
+| Key | Purpose |
+|---|---|
+| `nexora_employees` · `nexora_departments` | People and structure |
+| `nexora_attendance` · `nexora_leave_requests` | Time and leave |
+| `nexora_payroll_runs` | Payroll |
+
+**System**
+
+| Key | Purpose |
+|---|---|
+| `nexora_approvals` | Approval requests and decisions |
+| `nexora_audit_log` | Immutable activity trail |
+| `nexora_document_sequences` | Auto-numbering for documents |
+
+## 🔄 Key Workflows
+
+**Order-to-Cash**
+
+```
 Customer → Quotation → Sales Order → Approval
-→ Stock Reservation → Delivery → Stock Deduction
-→ Invoice → Accounts Receivable → Payment → Receipt
+  → Stock Reservation → Delivery → Stock Deduction
+  → Invoice → Accounts Receivable → Payment → Receipt
+```
 
-Procure-to-Pay:
+**Procure-to-Pay**
+
+```
 Purchase Request → Purchase Order → Supplier Delivery
-→ Goods Receipt → Inventory Increase → Supplier Bill
-→ Accounts Payable → Payment → Supplier Settlement
+  → Goods Receipt → Inventory Increase → Supplier Bill
+  → Accounts Payable → Payment → Supplier Settlement
+```
 
-Accounting:
+**Accounting**
+
+```
 Every transaction → Journal Entry (double-entry)
-Total Debit = Total Credit (enforced)
-Posted entries → Reversal only (no edit/delete)
+Total Debit = Total Credit          (enforced)
+Posted entries → Reversal only      (no edit / delete)
+```
 
-═══════════════════════════════════════════════
-DATA MODEL
-═══════════════════════════════════════════════
+## 🧮 Calculation Rules
 
-All localStorage keys prefixed with `nexora_`:
-- nexora_users, nexora_current_user, nexora_business,
-  nexora_settings, nexora_permissions
-- nexora_customers, nexora_suppliers, nexora_products,
-  nexora_categories, nexora_units, nexora_warehouses,
-  nexora_branches
-- nexora_quotations, nexora_sales_orders, nexora_deliveries,
-  nexora_sales_invoices, nexora_customer_returns
-- nexora_purchase_requests, nexora_purchase_orders,
-  nexora_goods_receipts, nexora_supplier_bills,
-  nexora_purchase_returns
-- nexora_stock_balances, nexora_stock_movements,
-  nexora_stock_transfers, nexora_stock_reservations,
-  nexora_stock_adjustments
-- nexora_accounts, nexora_journal_entries, nexora_journal_lines,
-  nexora_payments, nexora_payment_allocations,
-  nexora_fiscal_periods, nexora_expenses
-- nexora_employees, nexora_departments, nexora_attendance,
-  nexora_leave_requests, nexora_payroll_runs
-- nexora_approvals, nexora_audit_log, nexora_document_sequences
+| Metric | Formula |
+|---|---|
+| Revenue | Sum of paid sales invoices |
+| Expenses | Sum of paid supplier bills + expenses |
+| Receivables | Sum of unpaid and partially paid sales invoices |
+| Payables | Sum of unpaid and partially paid supplier bills |
+| Stock Value | Σ (quantity × cost price) |
+| Gross Profit | Revenue − COGS |
+| Net Profit | Revenue − Expenses |
+| Profit Margin % | (Net Profit ÷ Revenue) × 100 |
+| Stock Available | Quantity − reserved quantity |
+| Invoice Balance | Total − paid amount |
+| Aging Buckets | 0–30 · 31–60 · 61–90 · 90+ days |
 
-═══════════════════════════════════════════════
-CALCULATION RULES
-═══════════════════════════════════════════════
+**Edge cases:** refunded and cancelled orders are excluded from revenue. Division by zero is never performed; insufficient data returns an empty state.
 
-Revenue         = Sum of paid sales invoices
-Expenses        = Sum of paid supplier bills + expenses
-Receivables     = Sum of unpaid/partial sales invoices
-Payables        = Sum of unpaid/partial supplier bills
-Stock Value     = Σ (quantity × cost price)
-Gross Profit    = Revenue − COGS
-Net Profit      = Revenue − Expenses
-Profit Margin % = (Net Profit / Revenue) × 100
-Stock Available = quantity − reserved quantity
-Invoice Balance = total − paid amount
-Aging Buckets   = 0-30, 31-60, 61-90, 90+ days
+## 🚀 Getting Started
 
-Refund rule: refunded/cancelled orders excluded from revenue.
-Never divide by zero — insufficient data returns empty state.
+### Prerequisites
 
-═══════════════════════════════════════════════
-README REQUIREMENTS
-═══════════════════════════════════════════════
+- Node.js 20 or later
+- npm, pnpm or yarn
 
-Write the README with these sections in order:
+### Install
 
-1. Title + tagline + live demo placeholder
-2. Short intro paragraph (what NEXORA is, 2-3 lines)
-3. "What is NEXORA?" with bullet highlights + security warning
-4. Features (grouped by module, using tables/bullets)
-5. Tech Stack (table)
-6. Project Structure (code block)
-7. Data Model (tables grouped by category)
-8. Key Workflows (code blocks with arrows)
-9. Calculation Rules (table)
-10. Getting Started (prerequisites, install, dev, build, deploy)
-11. Try the Demo
-12. Privacy & Security Boundary
-13. Roadmap (out of scope items)
-14. License (MIT)
-15. Footer with name + tagline centered
+```bash
+git clone https://github.com/your-username/nexora.git
+cd nexora
+npm install
+```
 
-Tone: professional, confident, premium. Like a well-funded
-startup's README. Use emojis sparingly (only for section
-headers). Use tables liberally. Use code blocks for
-workflows and folder structure.
+### Develop
 
-Add badges at the top: Next.js 16, React 19, TypeScript,
-Tailwind v4, License MIT.
+```bash
+npm run dev
+```
 
-Length: comprehensive but scannable. A developer should be
-able to understand the whole project in 3 minutes.
+Open [http://localhost:3000](http://localhost:3000).
 
-═══════════════════════════════════════════════
-OUTPUT
-═══════════════════════════════════════════════
+### Build
 
-Give me the complete README.md in a single markdown code
-block, ready to copy-paste into GitHub.
+```bash
+npm run build
+npm run start
+```
+
+### Deploy
+
+NEXORA deploys to Vercel with zero configuration:
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Or import the repository from the [Vercel dashboard](https://vercel.com/new). No environment variables are required.
+
+## 🎮 Try the Demo
+
+1. Open the [live demo](https://your-demo-url.vercel.app) or your local instance.
+2. Load the sample business data from **Settings → Demo Data** (or complete first-run onboarding).
+3. Explore the full cycle: create a quotation, convert it to a sales order, deliver, invoice, and record a payment.
+4. Check **Finance → Trial Balance** to see every step reflected in the books.
+5. Press **⌘K** (or **Ctrl+K**) to jump anywhere.
+6. Use **Settings → Export** to back up your data as JSON, or **Reset** to start fresh.
+
+## 🔒 Privacy & Security Boundary
+
+| Aspect | Reality |
+|---|---|
+| Data location | Your browser's `localStorage` only; nothing is sent to any server |
+| Authentication | Client-side simulation for demonstration; not a security boundary |
+| Roles & permissions | Enforce UI behaviour only; anyone with browser access can bypass them |
+| Encryption | None. Data is stored as plain JSON |
+| Persistence | Cleared if you clear site data; not shared across browsers or devices |
+| Payments | Simulated records only; no real money movement |
+| Recommended use | Demos, prototyping, education, evaluation, personal experimentation |
+
+> [!CAUTION]
+> Do not use NEXORA to store production, regulated or personally identifiable data.
+
+## 🗺️ Roadmap
+
+The following are **intentionally out of scope** for the current release:
+
+| Item | Status |
+|---|---|
+| Backend API and database | Out of scope |
+| Real authentication (SSO, OAuth, MFA) | Out of scope |
+| Multi-user sync and real-time collaboration | Out of scope |
+| Real payment gateway integrations | Out of scope |
+| E-invoicing and tax authority filing | Out of scope |
+| Bank feeds and reconciliation | Out of scope |
+| Email, SMS and notification delivery | Out of scope |
+| Native mobile apps | Out of scope |
+
+## 📄 License
+
+Released under the [MIT License](./LICENSE). © 2026 NEXORA contributors.
+
+---
+
+<div align="center">
+
+**NEXORA**
+
+*Run everything. From one place.*
+
+</div>
