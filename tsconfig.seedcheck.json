@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "./.seedcheck",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "incremental": false,
+    "isolatedModules": false,
+    "verbatimModuleSyntax": false,
+    "jsx": "react"
+  },
+  "include": [
+    "src/lib/seed.ts",
+    "src/lib/calculations.ts",
+    "src/lib/dates.ts",
+    "src/lib/id.ts",
+    "src/types/erp.ts"
+  ]
+}
